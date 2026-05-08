@@ -30,11 +30,7 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${manrope.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-body bg-bg-light">
-        <Navbar />
-        <div className="flex-1 pt-20">
-          {children}
-        </div>
-        <Footer />
+        {children}
       </body>
     </html>
   );
