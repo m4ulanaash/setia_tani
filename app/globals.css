@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary-teal: #006767;
+  --color-primary-dark: #008282;
+  --color-accent-blue: #1C648E;
+  --color-light-teal: #8FF3F2;
+  --color-bg-light: #F6FAF9;
+  --color-bg-card: #F0F4F4;
+  
+  --font-heading: var(--font-plus-jakarta-sans);
+  --font-body: var(--font-manrope);
+}
+
+body {
+  background-color: var(--color-bg-light);
+  color: #3D4949;
+}
