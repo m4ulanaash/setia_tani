@@ -17,6 +17,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Setia Tani - The Real Local Product",
   description: "Dari bahan alami menjadi produk bernilai tinggi untuk keluarga Indonesia. Nikmati kebaikan alam dalam setiap gigitan.",
+  icons: {
+    icon: "/logo setia tani.png",
+  },
 };
 
 export default function RootLayout({
