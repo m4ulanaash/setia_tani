@@ -3,6 +3,7 @@ import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CarouselWrapper from "@/components/CarouselWrapper";
 
 export const revalidate = 60; // Revalidate every 60 seconds
 
@@ -154,7 +155,7 @@ export default async function Home() {
             </a>
           </div>
 
-          <div className="flex overflow-x-auto gap-6 lg:gap-8 pb-8 snap-x snap-mandatory scroll-smooth hide-scrollbar w-full pt-4">
+          <CarouselWrapper>
             {displayProducts.map((product: any, idx: number) => (
               <div key={idx} className="snap-start flex-none w-[80vw] sm:w-[260px] lg:w-[270px] bg-white rounded-3xl p-4 border border-slate-100 shadow-sm hover:shadow-xl transition-shadow flex flex-col self-stretch">
                 <div className="w-full h-48 bg-slate-100 rounded-2xl mb-5 flex items-center justify-center text-slate-400 text-sm overflow-hidden relative">
@@ -183,7 +184,7 @@ export default async function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </CarouselWrapper>
         </div>
       </section>
 
@@ -197,7 +198,7 @@ export default async function Home() {
             <p className="text-slate-600 text-lg">Langkah kami dalam memberdayakan komunitas dan inovasi pangan.</p>
           </div>
 
-          <div className="flex overflow-x-auto gap-6 lg:gap-8 pb-8 snap-x snap-mandatory scroll-smooth hide-scrollbar w-full pt-4">
+          <CarouselWrapper>
             {displayArticles.map((article: any, idx: number) => (
               <a key={idx} href={article.link} target="_blank" rel="noopener noreferrer" className="snap-start flex-none w-[85vw] sm:w-[350px] lg:w-[350px] bg-white rounded-3xl border border-teal-50 shadow-sm overflow-hidden group cursor-pointer hover:shadow-lg transition-all flex flex-col hover:-translate-y-1 self-stretch">
                 <div className="h-48 bg-slate-100 w-full overflow-hidden">
@@ -223,7 +224,7 @@ export default async function Home() {
                 </div>
               </a>
             ))}
-          </div>
+          </CarouselWrapper>
         </div>
       </section>
 
